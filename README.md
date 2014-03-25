@@ -25,7 +25,7 @@ If you would like to run the vagrant executable with sudo (for forwarding privil
 1. Change ```use_sudo=false``` to ```use_sudo=true``` in the workflow files ```action.sh``` and ```status.sh```.
 2. Add this line to your sudoers file via ```sudo visudo```:
     ```
-%admin ALL = (root) NOPASSWD: /usr/bin/vagrant status, /usr/bin/vagrant status *, usr/bin/vagrant up, /usr/bin/vagrant halt, /usr/bin/vagrant reload
+%admin ALL = (root) NOPASSWD: /usr/bin/vagrant status, /usr/bin/vagrant status *, /usr/bin/vagrant up, /usr/bin/vagrant halt, /usr/bin/vagrant reload
 ```
 
 If you run Vagrant with your own user, no extra steps are needed to use this workflow.
