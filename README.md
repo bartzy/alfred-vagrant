@@ -15,6 +15,7 @@ The packaged workflow can be downloaded [**here**](https://raw.github.com/Bartzy
 | vg up        | Start Vagrant                     |
 | vg halt      | Stop Vagrant                      |
 | vg reload    | Restart Vagrant                   |
+| vg ssh       | SSH into Vagrant (port 2222)      |
 | vg configure | Configure the Vagrantfile to use* |
 
 \* To configure the Vagrant workflow, you need to type ```vg configure ``` with a space, and then choose a Vagrantfile you want to control.
