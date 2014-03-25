@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-use_sudo=true
+use_sudo=false
 action="$1"
 
 vagrant_action ()

@@ -20,6 +20,12 @@ The packaged workflow can be downloaded [**here**](https://raw.github.com/Bartzy
 \* To configure the Vagrant workflow, you need to type ```vg configure ``` with a space, and then choose a Vagrantfile you want to control.
 
 ## sudo note
-Since I'm using Vagrant with port forwarding for privileged ports, I run the vagrant executable with sudo.
+If you would like to run the vagrant executable with sudo (for forwarding privileged ports, for example), you would need to do 2 things:
 
-Since you're probably running Vagrant as your own user, you will need to change this setting. It can be turned off on the workflow scripts ```action.sh``` and ```status.sh``` by changing ```use_sudo=false``` to ```use_sudo=true```.
+1. Change ```use_sudo=false``` to ```use_sudo=true``` in the workflow files ```action.sh``` and ```status.sh```.
+2. Add this line to your sudoers file via ```sudo visudo```:
+    ```bash
+%admin ALL = (root) NOPASSWD: /usr/bin/vagrant status, /usr/bin/vagrant status *, usr/bin/vagrant up, /usr/bin/vagrant halt, /usr/bin/vagrant reload
+```
+
+If you run Vagrant with your own user, no extra steps are needed to use this workflow.
