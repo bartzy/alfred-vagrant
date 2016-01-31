@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+PATH=$PATH:/usr/local/bin
 use_sudo=false
 
 print_result ()
